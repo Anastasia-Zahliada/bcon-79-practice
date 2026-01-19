@@ -20,6 +20,20 @@ out2.textContent = `[${ar1}]`;
 }
 
 
+const btn2 = document.querySelector(".b-2");
+const ar2 = ["random", true, 2, 15, -5];
+
+btn2.onclick = fn2;
+
+function fn2() {
+  const out2 = document.querySelector(".out-2");
+  let result = "";
+  for (const item of ar2) {
+    result += `${item}`;
+  }
+  out2.textContent = result;
+}
+
 // Task-3
 const btn3 = document.querySelector(".b-3");
 const ar3 = ["random", true, 2, 15, -5];
@@ -30,6 +44,17 @@ function fn3() {
 const out3 = document.querySelector(".out-3");
 
 out3.textContent = ar3.length;
+}
+
+const btn3 = document.querySelector(".b-3");
+const ar3 = ["random", true, 2, 15, -5];
+
+btn3.onclick = fn3;
+
+function fn3() {
+  const out3 = document.querySelector(".out-3");
+
+  out3.textContent = ar3.length;
 }
 
 // Task-4
@@ -46,6 +71,17 @@ out4.textContent = `${ar4[0]} ${ar4[3]} ${ar4[8]}`;
 }
 
 
+const btn4 = document.querySelector(".b-4");
+const ar4 = Array.from(Array(10).keys(), x => x + 1);
+
+btn4.onclick = fn4;
+
+function fn4() {
+  const out4 = document.querySelector(".out-4");
+  
+  out4.textContent = `${ar4[0]}${ar4[3]}${ar4[8]}`;
+}
+
 // Task-5
 const btn5 = document.querySelector(".b-5");
 const ar5 = Array.from(Array(10).keys(), x => (x + 1)*10);
@@ -58,6 +94,18 @@ const out5 = document.querySelector(".out-5");
 out5.textContent = `${ar5[0]} ${ar5[2]} ${ar5[3]}`;
 }
 
+
+
+const btn5 = document.querySelector(".b-5");
+const ar5 = Array.from(Array(10).keys(), x => (x + 1) * 10);
+
+btn5.onclick = fn5;
+
+function fn5() {
+  const out5 = document.querySelector(".out-5");
+  
+  out5.textContent = ar5[0] + ar5[2] + ar5[3];
+}
 
 
 // Task-6
@@ -115,6 +163,27 @@ out7.textContent = result;
 // }
 // out7.textContent = result;
 // }
+
+const btn8 = document.querySelector(".b-8");
+const ar8 = [];
+
+btn8.onclick = fn8;
+
+function fn8() {
+  const out8 = document.querySelector(".out-8");
+  const out81 = document.querySelector(".out-8-1");
+  
+  let result = "";
+  ar8[3] = 3.14;
+  ar8[4] = 17;
+  ar8[6] = 5;
+
+  for (const item of ar8) {
+    result += `${item}-`;
+  }
+out8.textContent = result;
+out81.textContent = ar8.length;
+}
 
 // Task-9
 
