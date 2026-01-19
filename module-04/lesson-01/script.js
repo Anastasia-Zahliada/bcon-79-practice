@@ -1,18 +1,45 @@
 // Task 1
+
+const btn1 = document.querySelector(".b-1");
+const out1 = document.querySelector(".out-1");
+
+btn1.onclick = fn1;
+
 const obj1 = {
   one: 15,
   two: 16,
   five: 20,
 };
 
+function fn1() {
+  out1.innerHTML = obj1.two;
+}
+
+
+
+
 // Task 2
+const btn2 = document.querySelector(".b-2");
+const out2 = document.querySelector(".out-2");
+
+btn2.onclick = fn2;
+
 const obj2 = {
   one: "hello",
   two: "mahai",
   five: "hi",
 };
 
+function fn2() {
+  out2.innerHTML = obj2['five'];
+}
+
 // Task 3
+const btn3 = document.querySelector(".b-3");
+const out3 = document.querySelector(".out-3");
+
+btn3.onclick = fn3;
+
 const obj3 = {
   one: "hello",
   two: "mahai",
@@ -21,6 +48,17 @@ const obj3 = {
   odd: "hi",
   mix: "mix",
 };
+
+function fn3() {
+  let res = "";
+  for (const key in obj3) {
+    if (obj3[key] === "hi"){
+      if (res !== "") res += " ";
+        res += obj3[key];
+    }
+  }
+  out3.innerHTML = res;
+}
 
 // Task 4
 const obj4 = {
@@ -38,17 +76,58 @@ const obj5 = {
   two: 2,
 };
 
+function fn5(object, selector) {
+  let res = "";
+  for (const key in object) {
+    const value = object[key];
+    res += `${key} : ${value} <br>`
+    
+  }
+  selector.innerHTML = res;
+}
+
 // Task 6
+const btn6 = document.querySelector(".b-6");
+const out6 = document.querySelector(".out-6");
+const input61 = document.querySelector(".i-61");
+const input62 = document.querySelector(".i-62");
 const obj6 = {
   b: 17,
   e: 22,
 };
+btn6.onclick = fn6;
+
+function fn6() {
+  const key = input61.value;
+  const value = input62.value;
+  obj6[key] = value;
+  fn5(obj6, out6)
+
+}
+
 
 // Task 7
+const btn7 = document.querySelector(".b-7");
+const out7 = document.querySelector(".out-7");
+const input7 = document.querySelector(".i-7");
 const obj7 = {
   b: 17,
   e: 22,
 };
+
+btn7.onclick = fn7;
+
+function fn7() {
+  let result = 0;
+  const searchKey = input7.value;
+  for (const key in obj7) {
+    if (searchKey === key) {
+      result = 1;
+      break
+    }
+  }
+  out7.innerHTML = result;
+}
 
 // Task 8
 const obj8 = {

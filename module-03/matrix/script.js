@@ -177,3 +177,28 @@ function fn9() {
 
 
 // Task 10
+const out10 = document.querySelector(".out-10");
+const btn10 = document.querySelector(".b-10");
+
+btn10.onclick = fn10;
+
+function fn10() {
+  let sum = "";
+
+  for (let i = 0; i < 5; i++) {
+    for (let j = 1; j <= 10; j++) {
+      let n = i * 10 + j;
+      if (n < 10) {
+        sum += "0" + n + "_";
+      } else {
+        sum += n + "_";
+      }
+      
+    }
+    
+      sum += "<br>";
+  
+   
+  }
+  out10.innerHTML = sum;
+}
