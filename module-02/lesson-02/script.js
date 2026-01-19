@@ -1,7 +1,31 @@
 //  Task 1
 // Кнопка .b-1 запускає функцію fn1. Функція повинна виводити в .out-1 рядок вигляду:
-//     1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_
+//1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_
+//.out-1 рядок вигляду
+const btn1 = document.querySelector(".b-1");
+const out1 = document.querySelector(".out-1");
+btn1.onclick = f1;
+
+function f1() {
+let result = "";
+for (let i = 1; i <= 16; i+=1) {
+console.log(i);
+result += `${i}_`;
+}
+out1.textContent = result;
+}
+
 // Роздільник - нижнє підкреслення. Завдання вирішується за допомогою циклу.
+const btn1 = document.querySelector(".b-1");
+const out1 = document.querySelector(".out-1");
+btn1.onclick = fn1;
+function fn1() {
+  let result = "";
+  for (let i = 1; i <= 16; i += 1) {
+    result += `${i}_`;
+  }
+  out1.textContent = result;
+}
 
 const btn1 = document.querySelector(".b-1");
 const out1 = document.querySelector(".out-1");
@@ -20,6 +44,16 @@ function fn1() {
 // Кнопка .b-2 запускає функцію fn2. Функція повинна виводити в .out-2 рядок вигляду:
 //     12_14_16_18_20_22_24_26_28_30_32_34_36_38_
 // Роздільник - нижнє підкреслення. Завдання вирішується за допомогою циклу.
+const btn2 = document.querySelector(".b-2");
+const out2 = document.querySelector(".out-2");
+btn2.onclick = fn2;
+function fn2() {
+  let result = "";
+  for (let i = 12; i <= 38; i += 2) {
+    result += `${i}_`;
+  }
+  out2.textContent = result;
+}
 
 const btn2 = document.querySelector(".b-2");
 const out2 = document.querySelector(".out-2");
@@ -74,6 +108,23 @@ function fn4() {
 // Кнопка .b-5 запускає функцію fn5. Функція повинна виводити в .out-5 рядок вигляду:
 // 1_*2_**3_*4_**5_*6_**7_*8_**9_*10_**11_*12_**13_*14_**15_*16_**17_*
 // від 1 до 17 з кроком 1. Роздільник - знак підкреслення та зірочка (якщо число непарне, і дві зірочки, якщо парне). Завдання вирішується за допомогою циклу.
+//5
+const btn5 = document.querySelector(".b-5");
+const out25 = document.querySelector(".out-5");
+btn5.onclick = f5;
+
+function fn5() {
+let result4 = "";
+for (let i = 1; i>=17; i++) {
+if (i % 2 === 0) {
+result5 += `${i}_**`;
+} else {
+result5 += `${i}_*`;
+}
+}
+out5.textContent = result4;
+}
+
 
 const btn5 = document.querySelector(".b-5");
 const out5 = document.querySelector(".out-5");
@@ -146,6 +197,38 @@ function fn7() {
 // Роздільник - підкреслення. Якщо користувач ввів 4 і 8 і натиснув кнопку, ми отримаємо:
 //  4_5_6_7_8_
 // Завдання вирішується за допомогою циклу.
+const btn8 = document.querySelector(".b-8");
+const out28 = document.querySelector(".out-8");
+const input81 = document.querySelector(".i-81");
+const input82 = document.querySelector(".i-82");
+btn8.onclick = f8;
+
+function f8() {
+for (let i = 0; i < array.length; i++) {
+let result = "";
+let res1 = +input81.value;
+let res2 = +input82.value;
+for (let i = res1; i <= res2; i++) {
+result += `${i}_`;
+}
+out28.textContent = result;
+}
+
+}
+
+// 2 sposib
+
+// function fn8(){
+//  const inputMin = Number(document.querySelector(".i-81").value);
+// const inputMax = Number(document.querySelector(".i-82").value);
+// let output = "";
+//  for (let i = inputMin; i <= inputMax; i++) {
+//    output += `${ i }_`;
+//  }
+//  document.querySelector(".out-8").textContent = output;
+//  }
+//  document.querySelector(".b-8").onclick = fn8;
+
 
 const btn8 = document.querySelector(".b-8");
 const out8 = document.querySelector(".out-8");
@@ -173,6 +256,14 @@ function fn8() {
 // 6_7_8_
 // Завдання вирішується за допомогою циклу. Підказка - спочатку робимо перевірку, а потім запускаємо цикл.
 // цикл - один
+//в інпут клієнт може ввести не в тому порядку що ми очікуємо а навпаки
+
+const btn9 = document.querySelector(".b-9");
+const out29 = document.querySelector(".out-9");
+const input91 = document.querySelector(".i-91");
+const input92 = document.querySelector(".i-92");
+btn9.onclick = fn9;
+
 
 const btn9 = document.querySelector(".b-9");
 const out9 = document.querySelector(".out-9");
@@ -254,6 +345,10 @@ document.querySelector('.b-11').addEventListener('click', fn11);
 // - отримати всі div.div-12
 // - перебрати їх за допомогою циклу. Звернення до div виглядає так: elem[i]
 // - застосувати до кожного elem[i].style.background = ‘orange’
+document.querySelector(".b-12").onclick = fn12;
+
+function fn12() {
+const elems = document.querySelectorAll(".div-12");
 
 function fn12() {
   const elems = document.querySelectorAll('.div-12');
@@ -271,6 +366,17 @@ document.querySelector('.b-12').addEventListener('click', fn12);
 // - для першого  1
 // - для другого  2
 // - для третього 3
+document.querySelector(".b-13").onclick = fn13;
+
+function fn13() {
+  const inputs = document.querySelectorAll(".i-13");
+
+  for (let i = 0; i < inputs.lengt; i++) {
+    inputs[i].value = i + 1;
+    
+  }
+
+}
 
 const inputs13 = document.querySelectorAll('.i-13');
 
@@ -285,6 +391,9 @@ for (let i = 0; i < inputs13.length; i++) {
 // - перебрати їх за допомогою циклу. Звернення до елемента виглядає так: elem[i]
 // - вивести в .out-14 value вибраного input
 // Перевірити, чи вибраний елемент, можна за допомогою elem[i].checked.
+// const btn14 = fn14;
+// const input14 = document.querySelector(".i-14");
+// const out14 = document.querySelector(".out-14");
 
 function fn14() {
   const elems = document.querySelectorAll('.i-14');
