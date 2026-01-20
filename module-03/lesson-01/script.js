@@ -1,47 +1,149 @@
 // Task-1
 
+const btn1 = document.querySelector(".b-1");
+const ar1 = ["random", true, 2, 15, -5];
+
+btn1.onclick = fn1;
+
+function fn1() {
+  const out1 = document.querySelector(".out-1");
+
+  out1.textContent = `[${ar1}]`;
+}
+
 // Task-2
+
+const btn2 = document.querySelector(".b-2");
+const ar2 = ["random", true, 2, 15, -5];
+
+btn2.onclick = fn2;
+
+function fn2() {
+  const out2 = document.querySelector(".out-2");
+  let result = "";
+  for (const item of ar2) {
+    result += `${item}`;
+  }
+  out2.textContent = result;
+}
 
 // Task-3
 
+const btn3 = document.querySelector(".b-3");
+const ar3 = ["random", true, 2, 15, -5];
+
+btn3.onclick = fn3;
+
+function fn3() {
+  const out3 = document.querySelector(".out-3");
+
+  out3.textContent = ar3.length;
+}
+
 // Task-4
+
+const btn4 = document.querySelector(".b-4");
+const ar4 = Array.from(Array(10).keys(), x => x + 1);
+
+btn4.onclick = fn4;
+
+function fn4() {
+  const out4 = document.querySelector(".out-4");
+  
+  out4.textContent = `${ar4[0]}${ar4[3]}${ar4[8]}`;
+}
 
 // Task-5
 
+const btn5 = document.querySelector(".b-5");
+const ar5 = Array.from(Array(10).keys(), x => (x + 1) * 10);
+
+btn5.onclick = fn5;
+
+function fn5() {
+  const out5 = document.querySelector(".out-5");
+  
+  out5.textContent = ar5[0] + ar5[2] + ar5[3];
+}
+
+
 // Task-6
+
+const btn6 = document.querySelector(".b-6");
+const ar6 = ["Олексій", "Терези", "Понеділок", "Квітень"];
+
+btn6.onclick = fn6;
+
+function fn6() {
+  const out6 = document.querySelector(".out-6");
+  let result = "";
+
+  for (const item of ar6) {
+    result += item + " ";
+  }
+out6.textContent = result;
+}
+
 
 // Task-7
 
+const btn7 = document.querySelector(".b-7");
+const ar7 = [];
+
+btn7.onclick = fn7;
+
+function fn7() {
+  const out7 = document.querySelector(".out-7");
+  let result = "";
+  ar7[7] = "Vietnam";
+  ar7[6] = "Turkey";
+  ar7[5] = "Italy";
+
+  for (const item of ar7) {
+    result += item + " ";
+  }
+out7.textContent = result;
+}
+
 // Task-8
+
+const btn8 = document.querySelector(".b-8");
+const ar8 = [];
+
+btn8.onclick = fn8;
+
+function fn8() {
+  const out8 = document.querySelector(".out-8");
+  const out81 = document.querySelector(".out-8-1");
+  
+  let result = "";
+  ar8[3] = 3.14;
+  ar8[4] = 17;
+  ar8[6] = 5;
+
+  for (const item of ar8) {
+    result += `${item}-`;
+  }
+out8.textContent = result;
+out81.textContent = ar8.length;
+}
 
 // Task-9
 
-// Task-10
+const ar9 = ["Roman", "Lion", "12", "August"];
+const out9 = document.querySelector(".out-9");
+  const btn9 = document.querySelector(".out-9");
 
-const ar10 = [100, 200, 300, 400, 700, 121];
-const out10 = document.querySelector(".out-10");
-  const btn10 = document.querySelector(".out-10");
+  btn9.onclick = fn9;
 
-  btn10.onclick = fn10;
-
-  function fn10() {
-   for (const element of ar10) {
-    
-   }
-    out10.textContent = ;
+  function fn9() {
+    const lastI = ar9.length - 1;
+    out9.textContent = ar9[lastI];
   }
 
+// Task-10
+
 // Task-11
-
-const ar11 = [2,3,4,5,6,7];
-const btn11 = document.querySelector(".b-11");
-const out11 = document.querySelector(".out-11");
-
-btn11.onclick = fn11;
-
-function fn11() {
-  
-}
 
 // Task-12
 
@@ -57,61 +159,6 @@ function fn11() {
 
 // Task-18
 
-const ar18 = [15,24,13,78,21,4,45,67];
-const btn18 = document.querySelector(".b-18");
-const out18 = document.querySelector(".out-18");
-
-btn18.onclick = fn18;
-console.log("🚀 ~ fn18 ~ ar18:", ar18.length)
-function fn18() {
-  let max = ar18[0]; // 78
-  for (let i = 1; i < ar18.length; i++) { //step 4: i=4 i < 8
-    
-    const element = ar18[i]; // ar18[5] = 4
-    if (element > max) {
-      max = element;
-
-    }
-  }
-  out18.textContent = max;
-}
-
 // Task-19
 
-const ar19 = [15, 424, 313, 78, 241, 4, 45, 67]
-const btn19 = document.querySelector(".b-19");
-const out19 = document.querySelector(".out-19");
-
-btn19.onclick = fn19;
-
-function fn19() {
-  let min = ar19[0]; // min = 15
-  for (let i = 1; i < ar19.length; i++) { //step 1: i=1 i < 8
-    
-    const element = ar19[i]; // ar19[1] = 424
-    if (element < min) {
-      min = element;
-
-    }
-  }
-  out19.textContent = min;
-}
-
 // Task-20
-
-const ar20 = [4, 5, 6, 7, 8, 9, 10];
-const btn20 = document.querySelector(".b-20");
-const out20 = document.querySelector(".out-20");
-
-btn20.onclick = fn20;
-
-function fn20() {
-  let sum = 0;
-
-  for (let i = 0; i < ar20.length; i++) {
-    const element = ar20[i];
-    sum += element;
-    
-  }
-  out20.textContent = sum;
-}
