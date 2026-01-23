@@ -275,12 +275,29 @@ function fn13() {
 }
 
 // Task 14
+const btn14 = document.querySelector(".b-14");
+const out14 = document.querySelector(".out-14")
+
 const obj14 = {
   prim: [1, 2, 23],
   one: [3, 4, 5],
   test: [6, 7, 8],
   mango: [9, 10],
 };
+
+btn14.onclick = () => {
+  fn14(obj14)
+}
+;
+
+function fn14(object) {
+  let result = "";
+  for (const key in object) {
+    object[key][0];
+    result += `${[0]} `
+  }
+  out14.innerHTML = result;
+}
 
 // Task 15
 const obj15 = {
