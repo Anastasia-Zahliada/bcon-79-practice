@@ -16,6 +16,13 @@ const arr5_res = [];
 
 // Task 6
 const str6 = "helloworld";
+const btn6 = document.querySelector(".b-6")
+
+const fn6 = () => {
+const arr6_res = str6.split();
+}
+
+btn6.onclick = fn6;
 
 // Task 7
 const str7 = "hello world hi mazai";

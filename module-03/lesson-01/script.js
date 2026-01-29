@@ -1,13 +1,13 @@
 // Task-1
 
 const btn1 = document.querySelector(".b-1");
+const out1 = document.querySelector(".out-1");
 const ar1 = ["random", true, 2, 15, -5];
 
 btn1.onclick = fn1;
 
 function fn1() {
-  const out1 = document.querySelector(".out-1");
-
+  
   out1.textContent = `[${ar1}]`;
 }
 
@@ -15,11 +15,11 @@ function fn1() {
 
 const btn2 = document.querySelector(".b-2");
 const ar2 = ["random", true, 2, 15, -5];
+const out2 = document.querySelector(".out-2");
 
 btn2.onclick = fn2;
 
 function fn2() {
-  const out2 = document.querySelector(".out-2");
   let result = "";
   for (const item of ar2) {
     result += `${item}`;
@@ -132,7 +132,7 @@ out81.textContent = ar8.length;
 
 const ar9 = ["Roman", "Lion", "12", "August"];
 const out9 = document.querySelector(".out-9");
-  const btn9 = document.querySelector(".out-9");
+  const btn9 = document.querySelector(".b-9");
 
   btn9.onclick = fn9;
 
