@@ -20,10 +20,14 @@ const notesList = document.querySelector(".js-notes-list");
 const card = document.querySelector(".js-card");
 const form = document.querySelector(".js-form");
 const btnDelete = document.querySelector(".js-delete-btn");
+const themeToggler = document.querySelector(".js-theme-toggler");
+
+setTheme(loadLS(STORAGE_KEY.appTheme));
 
 //! Listeners
 form.addEventListener("submit", onFormSubmit);
 notesList.addEventListener("click", onBtnDeleteClick);
+themeToggler.addEventListener("click", onTogglerClick);
 
 const notesData = loadLS(STORAGE_KEY.notes);
 if (notesData !== undefined) {
@@ -68,6 +72,22 @@ function createNote({ id, name, body }) {
                   </button>
           </div>
       </li>`;
+}
+
+function setTheme(theme) {
+  const currentTheme = theme ?? "light";
+  currentTheme === "light"
+    ? themeToggler
+    : themeToggler.setAttribute("checked", "");
+  themeToggler.value = currentTheme;
+  document.documentElement.setAttribute("data-bs-theme", currentTheme);
+  store.appTheme = currentTheme;
+}
+
+function onTogglerClick(event) {
+  const currentTheme = store.appTheme === "light" ? "dark" : "light";
+  setTheme(currentTheme);
+  saveLS(STORAGE_KEY.appTheme, currentTheme);
 }
 
 //! Local storage service
